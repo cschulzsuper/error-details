@@ -16,10 +16,10 @@
 		<PackageId>Super.Core.ErrorDetails</PackageId>
 		<PackageTags>Error Handling;ASP.NET Core;CSharp;Exception-Handling</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageProjectUrl>https://github.com/super/error-details</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/cschulzsuper/error-details</PackageProjectUrl>
 		<PackageIcon>icon.png</PackageIcon>
 		<RepositoryType>git</RepositoryType>
-		<RepositoryUrl>https://github.com/super/error-details</RepositoryUrl>
+		<RepositoryUrl>https://github.com/cschulzsuper/error-details</RepositoryUrl>
 	</PropertyGroup>
 
 	<ItemGroup>

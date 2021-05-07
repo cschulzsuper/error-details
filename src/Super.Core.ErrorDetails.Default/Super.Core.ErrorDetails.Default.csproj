@@ -4,10 +4,32 @@
 		<TargetFramework>net5.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<RootNamespace>Super.Core.ErrorDetails</RootNamespace>
+
+		<Authors>Christian Schulz</Authors>
+		<Company></Company>
+		<Copyright>Copyright 2021 (c) Christian Schulz. All rights reserved.</Copyright>
+
+		<Description>A default extension for the extensible aspect oriented error detail handler.</Description>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+		<!-- NuGet settings -->
+		<PackageId>Super.Core.ErrorDetails.Default</PackageId>
+		<PackageTags>Error Handling;ASP.NET Core;CSharp;Exception-Handling</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/super/error-details</PackageProjectUrl>
+		<PackageIcon>icon.png</PackageIcon>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/super/error-details</RepositoryUrl>
+
 	</PropertyGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\Super.Core.ErrorDetails\Super.Core.ErrorDetails.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="icon.png" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 </Project>

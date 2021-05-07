@@ -1,16 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\Super.Core.ErrorDetails.Default\Super.Core.ErrorDetails.Default.csproj" />
-    <ProjectReference Include="..\SharedClasses\SharedClasses.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\Super.Core.ErrorDetails.Default\Super.Core.ErrorDetails.Default.csproj" />
+		<ProjectReference Include="..\SharedClasses\SharedClasses.csproj" />
+	    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+</ItemGroup>
 
 </Project>

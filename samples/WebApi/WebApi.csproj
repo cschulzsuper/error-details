@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Super.Core.Default\Super.Core.ErrorDetails.Default.csproj" />
+    <ProjectReference Include="..\..\src\Super.Core.ErrorDetails.Default\Super.Core.ErrorDetails.Default.csproj" />
     <ProjectReference Include="..\SharedClasses\SharedClasses.csproj" />
   </ItemGroup>
 

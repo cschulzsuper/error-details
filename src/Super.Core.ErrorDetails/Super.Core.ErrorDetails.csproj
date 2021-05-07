@@ -10,7 +10,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Super.Core.Contract\Super.Core.ErrorDetails.Contract.csproj" />
+	  <ProjectReference Include="..\Super.Core.ErrorDetails.Contract\Super.Core.ErrorDetails.Contract.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -1,0 +1,53 @@
+﻿@page "/force-error"
+
+@inject IErrorDetailsGenerator ErrorDetailsGenerator
+
+<h1>Force an Error</h1>
+
+<div>
+    <button class="btn btn-primary" @onclick="ExceuteActionAsync">Don't touch this button!</button>
+</div>
+
+<div class="form-outline m-4">
+    <pre>
+        @ErrorDetails
+    </pre>
+</div>
+
+@code {
+    private string ErrorDetails = string.Empty;
+
+    [ErrorMessage("Could not execute action asynchronous action")]
+    private async Task ExceuteActionAsync()
+    {
+        try
+        {
+            ExceuteAction();
+            await Task.CompletedTask;
+        }
+        catch (Exception exception)
+        {
+            var errorDetails = await ErrorDetailsGenerator.GenerateAsync(exception);
+
+            var jsonSerializerOptions = new JsonSerializerOptions();
+
+            jsonSerializerOptions.WriteIndented = true;
+            jsonSerializerOptions.IgnoreNullValues = true;
+            jsonSerializerOptions.Converters.Add(new FormattableStringConverter());
+
+            ErrorDetails = JsonSerializer.Serialize(errorDetails, jsonSerializerOptions);
+        }
+    }
+
+    [ErrorMessage("Could not execute action")]
+    private void ExceuteAction()
+    {
+        ExceuteActionWithTimestamp(DateTimeOffset.Now);
+    }
+
+    [ErrorMessage("Could not execute action with data")]
+    private void ExceuteActionWithTimestamp(DateTimeOffset timestamp)
+    {
+        throw new SharedException($"An error was thrown at {timestamp} while executing the action");
+    }
+}

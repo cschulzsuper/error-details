@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Super.Core.ErrorDetails</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Super.Core.ErrorDetails\Super.Core.ErrorDetails.csproj" />
+	</ItemGroup>
+
+</Project>

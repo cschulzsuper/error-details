@@ -9,7 +9,7 @@ env:
     PROJECT_NAME_CONTRACT: Super.Core.ErrorDetails.Contract
     PROJECT_NAME_DEFAULT: Super.Core.ErrorDetails.Default
     
-    GITHUB_FEED: https://nuget.pkg.github.com/cschulzsuper/
+    GITHUB_FEED: https://nuget.pkg.github.com/cschulzsuper/index.json
     NUGET_FEED: https://api.nuget.org/v3/index.json
     PACKAGE_VERSION: ${{ github.event.release.tag_name }}
 

@@ -8,7 +8,7 @@ namespace Super.Core.ErrorDetails.Extensions
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddErrorDetailsDefault(this IServiceCollection services)
+        public static IServiceCollection AddErrorDetailsWithAnnotations(this IServiceCollection services)
         {
             return services
                 .AddErrorDetails(options =>
@@ -22,13 +22,9 @@ namespace Super.Core.ErrorDetails.Extensions
                     options.Filters.TargetSiteDeclaringType();
                     options.Filters.InnerException();
                     options.Filters.InnerExceptions();
-                    options.Filters.ErrorType("about:blank");
                     options.Filters.ErrorTypeFromAnnotation<ErrorTypeAttribute>(x => x.Type);
-                    options.Filters.ErrorTypeFromService<IErrorTypeProvider<MemberInfo>>();
-                    options.Filters.ErrorMessage("unknown error");
                     options.Filters.ErrorMessageFromException();
                     options.Filters.ErrorMessageFromAnnotation<ErrorMessageAttribute>(x => x.Message);
-                    options.Filters.ErrorMessageFromService<IErrorMessageProvider<MemberInfo>>();
                 });
         }
     }

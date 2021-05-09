@@ -20,9 +20,10 @@ namespace WebApi.Controllers
         [HttpPost]
         [ErrorType("api-error")]
         [ErrorMessage("Could not process post for weather forecast")]
-        public IEnumerable<WeatherForecast> Post()
+        public IActionResult Post()
         {
-            return _service.Create(DateTime.Now);
+            _service.Create(DateTime.Now);
+            return Ok(DateTime.Now);
         }
     }
 }

@@ -5,7 +5,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Super.Core.ErrorDetails.Default\Super.Core.ErrorDetails.Default.csproj" />
+		<ProjectReference Include="..\..\src\Super.Core.ErrorDetails.Annotations\Super.Core.ErrorDetails.Annotations.csproj" />
 		<ProjectReference Include="..\SharedClasses\SharedClasses.csproj" />
 	</ItemGroup>
 

@@ -5,6 +5,7 @@ namespace Super.Core.ErrorDetails
 {
     public record ErrorDetails(
         FormattableString? PrincipalMessage,
+        string Name,
         string? Type,
         string? Source)
     {

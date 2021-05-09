@@ -7,7 +7,7 @@ namespace WebApi.Services
 {
     public class WeatherForecastService : IWeatherForecastService
     {
-        public IEnumerable<WeatherForecast> Create(DateTime date)
+        public void Create(DateTime date)
         {
             throw new SharedException($"The weather for the given date '{date}' is unpredictable. No forecast was created.");
         }

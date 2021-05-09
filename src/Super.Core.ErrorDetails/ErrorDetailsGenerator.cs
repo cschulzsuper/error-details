@@ -34,6 +34,7 @@ namespace Super.Core.ErrorDetails
 
             var errorDetails = new ErrorDetails(
                 errorDetailContext.Message,
+                errorDetailContext.Exception.GetType().Name,
                 errorDetailContext.Type,
                 GetMemberName(errorDetailContext.TargetSite));
 

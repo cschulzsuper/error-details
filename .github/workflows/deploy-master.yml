@@ -7,7 +7,7 @@ on:
 env:
     PROJECT_NAME_IMPLEMENTATION: Super.Core.ErrorDetails
     PROJECT_NAME_CONTRACT: Super.Core.ErrorDetails.Contract
-    PROJECT_NAME_DEFAULT: Super.Core.ErrorDetails.Default
+    PROJECT_NAME_ANNOTATIONS: Super.Core.ErrorDetails.Annotations
     
     GITHUB_FEED: https://nuget.pkg.github.com/cschulzsuper/index.json
     NUGET_FEED: https://api.nuget.org/v3/index.json
@@ -65,19 +65,19 @@ jobs:
 
 
     - name: Build Default
-      run: dotnet build -c Release --no-restore -p:Version=${PACKAGE_VERSION/v} src/$PROJECT_NAME_DEFAULT/$PROJECT_NAME_DEFAULT.csproj
+      run: dotnet build -c Release --no-restore -p:Version=${PACKAGE_VERSION/v} src/$PROJECT_NAME_ANNOTATIONS/$PROJECT_NAME_ANNOTATIONS.csproj
 
     - name: Pack Default
-      run: dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=${PACKAGE_VERSION/v} src/$PROJECT_NAME_DEFAULT/$PROJECT_NAME_DEFAULT.csproj
+      run: dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=${PACKAGE_VERSION/v} src/$PROJECT_NAME_ANNOTATIONS/$PROJECT_NAME_ANNOTATIONS.csproj
 
     - name: Push Default to GitHub Feed
-      run: dotnet nuget push ./src/${{ env.PROJECT_NAME_DEFAULT }}/bin/Release/*.nupkg --source $GITHUB_FEED --api-key ${{secrets.GITHUB_TOKEN}} --skip-duplicate --no-symbols true
+      run: dotnet nuget push ./src/${{ env.PROJECT_NAME_ANNOTATIONS }}/bin/Release/*.nupkg --source $GITHUB_FEED --api-key ${{secrets.GITHUB_TOKEN}} --skip-duplicate --no-symbols true
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
         name: nupkg
-        path: ./src/${{ env.PROJECT_NAME_DEFAULT }}/bin/Release/*.nupkg
+        path: ./src/${{ env.PROJECT_NAME_ANNOTATIONS }}/bin/Release/*.nupkg
 
   release:
     needs: build

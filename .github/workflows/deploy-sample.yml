@@ -9,7 +9,7 @@ on:
       - master
 
 env:
-    PROJECT_NAME: Super.Core.ErrorDetails.Default
+    PROJECT_NAME: Super.Core.ErrorDetails.Annotations
 
 jobs:
   build:

@@ -14,7 +14,7 @@
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
 		<!-- NuGet settings -->
-		<PackageId>Supercode.Core.ErrorDetails.Default</PackageId>
+		<PackageId>Supercode.Core.ErrorDetails.Annotations</PackageId>
 		<PackageTags>Error Handling;ASP.NET Core;CSharp;Exception-Handling;.NET</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/cschulzsuper/error-details</PackageProjectUrl>

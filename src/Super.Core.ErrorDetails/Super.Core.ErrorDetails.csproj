@@ -8,13 +8,13 @@
 		<Company></Company>
 		<Copyright>Copyright 2021 (c) Christian Schulz. All rights reserved.</Copyright>
 
-		<Description>Extensible aspect oriented error detail handler to analyze exceptions.</Description>
+		<Description>Extensible aspect oriented error detail handler to analyze exceptions in .NET.</Description>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
 		<!-- NuGet settings -->
 		<PackageId>Super.Core.ErrorDetails</PackageId>
-		<PackageTags>Error Handling;ASP.NET Core;CSharp;Exception-Handling</PackageTags>
+		<PackageTags>Error Handling;ASP.NET Core;CSharp;Exception-Handling;.NET</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/cschulzsuper/error-details</PackageProjectUrl>
 		<PackageIcon>icon.png</PackageIcon>

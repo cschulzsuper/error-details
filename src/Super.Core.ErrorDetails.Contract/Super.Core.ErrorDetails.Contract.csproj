@@ -15,7 +15,7 @@
 
 		<!-- NuGet settings -->
 		<PackageId>Super.Core.ErrorDetails.Contract</PackageId>
-		<PackageTags>Error Handling;ASP.NET Core;CSharp;Exception-Handling</PackageTags>
+		<PackageTags>Error Handling;ASP.NET Core;CSharp;Exception-Handling;.NET</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/cschulzsuper/error-details</PackageProjectUrl>
 		<PackageIcon>icon.png</PackageIcon>

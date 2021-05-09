@@ -9,7 +9,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Super.Core.ErrorDetails.Annotations\Super.Core.ErrorDetails.Annotations.csproj" />
+		<ProjectReference Include="..\..\src\Supercode.Core.ErrorDetails.Annotations\Supercode.Core.ErrorDetails.Annotations.csproj" />
 		<ProjectReference Include="..\SharedClasses\SharedClasses.csproj" />
 	    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
 </ItemGroup>

@@ -4,9 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SharedClasses.Exceptions;
-using Super.Core.ErrorDetails.Attributes;
-using Super.Core.ErrorDetails.Extensions;
-using Super.Core.ErrorDetails.Options;
+using Supercode.Core.ErrorDetails.Attributes;
+using Supercode.Core.ErrorDetails.Extensions;
+using Supercode.Core.ErrorDetails.Options;
 
 namespace BlazorServerSide
 {

@@ -10,10 +10,10 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using SharedClasses.Exceptions;
 using SharedClasses.JsonConverters;
-using Super.Core.ErrorDetails;
-using Super.Core.ErrorDetails.Attributes;
-using Super.Core.ErrorDetails.Extensions;
-using Super.Core.ErrorDetails.Options;
+using Supercode.Core.ErrorDetails;
+using Supercode.Core.ErrorDetails.Attributes;
+using Supercode.Core.ErrorDetails.Extensions;
+using Supercode.Core.ErrorDetails.Options;
 using WebApi.Services;
 using WebApi.Services.Contract;
 

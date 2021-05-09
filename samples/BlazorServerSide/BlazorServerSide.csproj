@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Super.Core.ErrorDetails.Annotations\Super.Core.ErrorDetails.Annotations.csproj" />
+		<ProjectReference Include="..\..\src\Supercode.Core.ErrorDetails.Annotations\Supercode.Core.ErrorDetails.Annotations.csproj" />
 		<ProjectReference Include="..\SharedClasses\SharedClasses.csproj" />
 	</ItemGroup>
 

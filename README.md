@@ -112,9 +112,11 @@ public async Task HandleError(HttpContext context)
 
 The above example could be processed and displayed on the client-side.
 
+> ---
 > An error has occurred
-  \- Could not process get for weather forecast
-  \- Could not get weather forecast for date
-  \- Weather forecast is not yet implemented
+>  - Could not process get for weather forecast
+>  - Could not get weather forecast for date
+>  - Weather forecast is not yet implemented
+> ---
 
 This gives the user of your product and the first  level support of your company a rough picture about the error. If your error messages are written consequently and meaningful, an elevation to the second or even the third level support can be prevented.

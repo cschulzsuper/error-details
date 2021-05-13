@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
 using Supercode.Core.ErrorDetails.Attributes;
+using System;
 using WebApi.Services.Contract;
 
 namespace WebApi.Controllers

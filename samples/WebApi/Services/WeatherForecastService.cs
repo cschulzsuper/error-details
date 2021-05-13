@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using SharedClasses.Exceptions;
+﻿using SharedClasses.Exceptions;
+using System;
 using WebApi.Services.Contract;
 
 namespace WebApi.Services

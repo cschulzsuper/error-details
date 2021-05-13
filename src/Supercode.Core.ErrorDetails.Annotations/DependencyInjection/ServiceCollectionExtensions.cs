@@ -1,10 +1,8 @@
-﻿using System.Reflection;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Supercode.Core.ErrorDetails.Attributes;
 using Supercode.Core.ErrorDetails.Options;
-using Supercode.Core.ErrorDetails.Providers;
 
-namespace Supercode.Core.ErrorDetails.Extensions
+namespace Supercode.Core.ErrorDetails.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {

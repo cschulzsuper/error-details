@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Supercode.Core.ErrorDetails.Providers;
+using System;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using Supercode.Core.ErrorDetails.Providers;
 
 namespace Supercode.Core.ErrorDetails.Filters
 {

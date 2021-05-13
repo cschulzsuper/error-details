@@ -1,8 +1,8 @@
-﻿using System;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Supercode.Core.ErrorDetails.Options;
+using System;
 
-namespace Supercode.Core.ErrorDetails.Extensions
+namespace Supercode.Core.ErrorDetails.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {
@@ -10,7 +10,7 @@ namespace Supercode.Core.ErrorDetails.Extensions
         {
             services.AddScoped<IErrorDetailsGenerator, ErrorDetailsGenerator>();
             services.AddScoped<IErrorDetailFilterProvider, ErrorDetailFilterProvider>();
-            
+
             services.Configure(configure);
 
             return services;

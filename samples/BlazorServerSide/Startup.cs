@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SharedClasses.Exceptions;
 using Supercode.Core.ErrorDetails.Attributes;
-using Supercode.Core.ErrorDetails.Extensions;
+using Supercode.Core.ErrorDetails.DependencyInjection;
 using Supercode.Core.ErrorDetails.Options;
 
 namespace BlazorServerSide

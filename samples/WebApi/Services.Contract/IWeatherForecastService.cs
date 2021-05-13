@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Supercode.Core.ErrorDetails.Attributes;
+﻿using Supercode.Core.ErrorDetails.Attributes;
+using System;
 
 namespace WebApi.Services.Contract
 {

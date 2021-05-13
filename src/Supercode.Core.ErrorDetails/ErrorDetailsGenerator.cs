@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Microsoft.Extensions.Options;
+using Supercode.Core.ErrorDetails.Filters;
+using Supercode.Core.ErrorDetails.Options;
+using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Options;
-using Supercode.Core.ErrorDetails.Filters;
-using Supercode.Core.ErrorDetails.Options;
 
 namespace Supercode.Core.ErrorDetails
 {
@@ -61,7 +61,7 @@ namespace Supercode.Core.ErrorDetails
 
                     await ProcessAsync(stackFrameErrorDetail);
 
-                    if (_errorDetailsOptions.Value.UnspecificyErrorMessages || 
+                    if (_errorDetailsOptions.Value.UnspecificyErrorMessages ||
                         stackFrameErrorDetail.Message != null)
                     {
                         var errorMessageValue = stackFrameErrorDetail.Message;

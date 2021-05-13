@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Supercode.Core.ErrorDetails.Filters;
+using Supercode.Core.ErrorDetails.Providers;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using Supercode.Core.ErrorDetails.Filters;
-using Supercode.Core.ErrorDetails.Providers;
 
 namespace Supercode.Core.ErrorDetails.Options
 {

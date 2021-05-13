@@ -1,19 +1,19 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using System.Text.Json;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Http;
 using SharedClasses.Exceptions;
 using SharedClasses.JsonConverters;
 using Supercode.Core.ErrorDetails;
 using Supercode.Core.ErrorDetails.Attributes;
-using Supercode.Core.ErrorDetails.Extensions;
+using Supercode.Core.ErrorDetails.DependencyInjection;
 using Supercode.Core.ErrorDetails.Options;
+using System.Text.Json;
+using System.Threading.Tasks;
 using WebApi.Services;
 using WebApi.Services.Contract;
 
@@ -35,7 +35,7 @@ namespace WebApi
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "WebApi", Version = "v1"});
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApi", Version = "v1" });
             });
 
             services.AddScoped<IWeatherForecastService, WeatherForecastService>();

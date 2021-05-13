@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Supercode.Core.ErrorDetails.Filters;
 using Supercode.Core.ErrorDetails.Options;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Supercode.Core.ErrorDetails
 {

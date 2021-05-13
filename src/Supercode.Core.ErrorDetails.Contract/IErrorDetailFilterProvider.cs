@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Supercode.Core.ErrorDetails.Filters;
+﻿using Supercode.Core.ErrorDetails.Filters;
+using System.Collections.Generic;
 
 namespace Supercode.Core.ErrorDetails
 {

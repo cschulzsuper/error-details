@@ -20,7 +20,7 @@ namespace Supercode.Core.ErrorDetails.Filters
             if (context.Message == null &&
                 context.Exception is TException typedException)
             {
-                    context.Message = _selector(typedException);
+                context.Message = _selector(typedException);
             }
         }
     }

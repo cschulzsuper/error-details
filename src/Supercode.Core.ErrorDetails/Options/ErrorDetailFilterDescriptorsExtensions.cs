@@ -33,23 +33,23 @@ namespace Supercode.Core.ErrorDetails.Options
             return descriptors;
         }
 
-        public static IList<ErrorDetailFilterDescriptor> ErrorType(this IList<ErrorDetailFilterDescriptor> descriptors, string type)
+        public static IList<ErrorDetailFilterDescriptor> ErrorCode(this IList<ErrorDetailFilterDescriptor> descriptors, string type)
         {
-            descriptors.Add(new ErrorDetailFilterDescriptor(typeof(ErrorTypeFilter), type));
+            descriptors.Add(new ErrorDetailFilterDescriptor(typeof(ErrorCodeFilter), type));
             return descriptors;
         }
 
-        public static IList<ErrorDetailFilterDescriptor> ErrorTypeFromService<TService>(this IList<ErrorDetailFilterDescriptor> descriptors)
-            where TService : class, IErrorTypeProvider<MemberInfo>
+        public static IList<ErrorDetailFilterDescriptor> ErrorCodeFromService<TService>(this IList<ErrorDetailFilterDescriptor> descriptors)
+            where TService : class, IErrorCodeProvider<MemberInfo>
         {
-            descriptors.Add(new ErrorDetailFilterDescriptor(typeof(ErrorTypeFromServiceFilter<TService>)));
+            descriptors.Add(new ErrorDetailFilterDescriptor(typeof(ErrorCodeFromServiceFilter<TService>)));
             return descriptors;
         }
 
-        public static IList<ErrorDetailFilterDescriptor> ErrorTypeFromAnnotation<TAttribute>(this IList<ErrorDetailFilterDescriptor> descriptors, Func<TAttribute, string> selector)
+        public static IList<ErrorDetailFilterDescriptor> ErrorCodeFromAnnotation<TAttribute>(this IList<ErrorDetailFilterDescriptor> descriptors, Func<TAttribute, string> selector)
             where TAttribute : Attribute
         {
-            descriptors.Add(new ErrorDetailFilterDescriptor(typeof(ErrorTypeFromAnnotationFilter<TAttribute>), selector));
+            descriptors.Add(new ErrorDetailFilterDescriptor(typeof(ErrorCodeFromAnnotationFilter<TAttribute>), selector));
             return descriptors;
         }
 

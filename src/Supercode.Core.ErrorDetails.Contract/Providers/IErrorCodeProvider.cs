@@ -1,6 +1,6 @@
 ﻿namespace Supercode.Core.ErrorDetails.Providers
 {
-    public interface IErrorTypeProvider<in TConstraint>
+    public interface IErrorCodeProvider<in TConstraint>
     {
         string? GetOrDefaultAsync(TConstraint constraint);
     }

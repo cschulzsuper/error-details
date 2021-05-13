@@ -4,12 +4,12 @@ using System.Collections.Generic;
 namespace Supercode.Core.ErrorDetails
 {
     public record ErrorDetails(
-        FormattableString? PrincipalMessage,
         string Name,
-        string? Type,
+        FormattableString? PrincipalMessage,
+        string? Code,
         string? Source)
     {
-        public ICollection<ErrorMessage> ErrorMessages { get; init; } = new List<ErrorMessage>();
+        public ICollection<ErrorMessage> SecondaryMessages { get; init; } = new List<ErrorMessage>();
         public ICollection<ErrorDetails> InnerErrors { get; init; } = new List<ErrorDetails>();
     }
 }

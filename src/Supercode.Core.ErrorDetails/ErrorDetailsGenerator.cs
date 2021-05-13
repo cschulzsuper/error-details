@@ -33,9 +33,9 @@ namespace Supercode.Core.ErrorDetails
             await ProcessAsync(errorDetailContext);
 
             var errorDetails = new ErrorDetails(
-                errorDetailContext.Message,
                 errorDetailContext.Exception.GetType().Name,
-                errorDetailContext.Type,
+                errorDetailContext.Message,
+                errorDetailContext.Code,
                 GetMemberName(errorDetailContext.TargetSite));
 
             if (_errorDetailsOptions.Value.InnerErrorsFromInnerExceptions)
@@ -61,19 +61,20 @@ namespace Supercode.Core.ErrorDetails
 
                     await ProcessAsync(stackFrameErrorDetail);
 
-                    if (stackFrameErrorDetail.Message != null)
+                    if (_errorDetailsOptions.Value.UnspecificyErrorMessages || 
+                        stackFrameErrorDetail.Message != null)
                     {
                         var errorMessageValue = stackFrameErrorDetail.Message;
-                        var errorMessageType = stackFrameErrorDetail.Type;
+                        var errorMessageCode = stackFrameErrorDetail.Code;
                         var errorMessageFirstMember = stackFrameErrorDetail.Members
                             .FirstOrDefault(x => x.DeclaringType?.IsInterface == false);
 
                         var errorMessage = new ErrorMessage(
                             errorMessageValue,
-                            errorMessageType,
+                            errorMessageCode,
                             GetMemberName(errorMessageFirstMember));
 
-                        errorDetails.ErrorMessages.Add(errorMessage);
+                        errorDetails.SecondaryMessages.Add(errorMessage);
                     }
                 }
             }

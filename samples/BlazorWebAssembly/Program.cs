@@ -25,7 +25,7 @@ namespace BlazorWebAssembly
 
                 options.Filters.TargetSite();
                 options.Filters.TargetSiteAsync();
-                options.Filters.ErrorType("about:blank");
+                options.Filters.ErrorCode("about:blank");
                 options.Filters.ErrorMessageFromAnnotation<ErrorMessageAttribute>(x => x.Message);
                 options.Filters.ErrorMessageFromException<SharedException>(x => x.Message);
             });

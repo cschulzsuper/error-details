@@ -17,6 +17,12 @@ namespace Supercode.Core.ErrorDetails.Options
             return options;
         }
 
+        public static ErrorDetailsOptions EnableUnspecificyErrorMessages(this ErrorDetailsOptions options, bool value = true)
+        {
+            options.UnspecificyErrorMessages = value;
+            return options;
+        }
+
         public static ErrorDetailsOptions ErrorDetailFilter<TFilter>(this ErrorDetailsOptions options)
             where TFilter : class, IErrorDetailFilter
         {

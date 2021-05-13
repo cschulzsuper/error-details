@@ -11,6 +11,6 @@ namespace Supercode.Core.ErrorDetails.Filters
         public ICollection<MemberInfo> Members { get; init; } = new HashSet<MemberInfo>();
         public ICollection<Exception> InnerExceptions { get; init; } = new HashSet<Exception>();
         public FormattableString? Message { get; set; }
-        public string? Type { get; set; }
+        public string? Code { get; set; }
     }
 }

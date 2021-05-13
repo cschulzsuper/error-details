@@ -3,7 +3,7 @@
 namespace Supercode.Core.ErrorDetails
 {
     public record ErrorMessage(
-        FormattableString Message,
-        string? Type,
+        FormattableString? Message,
+        string? Code,
         string? Source);
 }

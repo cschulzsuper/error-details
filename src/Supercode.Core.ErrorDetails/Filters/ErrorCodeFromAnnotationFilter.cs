@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace Supercode.Core.ErrorDetails.Filters
 {
-    public class ErrorTypeFromAnnotationFilter<TAttribute> : IErrorDetailFilter
+    public class ErrorCodeFromAnnotationFilter<TAttribute> : IErrorDetailFilter
         where TAttribute : Attribute
     {
         private readonly Func<TAttribute, string> _selector;
 
-        public ErrorTypeFromAnnotationFilter(Func<TAttribute, string> selector)
+        public ErrorCodeFromAnnotationFilter(Func<TAttribute, string> selector)
         {
             _selector = selector;
         }
@@ -19,7 +19,7 @@ namespace Supercode.Core.ErrorDetails.Filters
         {
             await next();
 
-            if (context.Type == null)
+            if (context.Code == null)
             {
                 var attribute = context.Members
                     .Select(x => x.GetCustomAttributes<TAttribute>())
@@ -29,7 +29,7 @@ namespace Supercode.Core.ErrorDetails.Filters
 
                 if (attribute != null)
                 {
-                    context.Type = _selector(attribute);
+                    context.Code = _selector(attribute);
                 }
             }
         }

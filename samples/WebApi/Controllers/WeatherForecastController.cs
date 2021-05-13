@@ -18,7 +18,7 @@ namespace WebApi.Controllers
         }
 
         [HttpPost]
-        [ErrorType("api-error")]
+        [ErrorCode("api-error")]
         [ErrorMessage("Could not process post for weather forecast")]
         public IActionResult Post()
         {

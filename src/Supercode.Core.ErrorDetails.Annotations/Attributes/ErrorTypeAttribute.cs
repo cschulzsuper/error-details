@@ -3,11 +3,11 @@
 namespace Supercode.Core.ErrorDetails.Attributes
 {
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property)]
-    public class ErrorTypeAttribute : Attribute
+    public class ErrorCodeAttribute : Attribute
     {
         public string Type { get; }
 
-        public ErrorTypeAttribute(string type)
+        public ErrorCodeAttribute(string type)
         {
             Type = type;
         }

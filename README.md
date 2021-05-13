@@ -1,4 +1,4 @@
-# Super Error Details
+# Error Details
 
 Extensible aspect oriented error detail handler to analyze exceptions.
 

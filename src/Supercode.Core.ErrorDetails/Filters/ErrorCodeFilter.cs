@@ -3,20 +3,20 @@ using System.Threading.Tasks;
 
 namespace Supercode.Core.ErrorDetails.Filters
 {
-    public class ErrorTypeFilter : IErrorDetailFilter
+    public class ErrorCodeFilter : IErrorDetailFilter
     {
-        private readonly string _errorType;
+        private readonly string _errorCode;
 
-        public ErrorTypeFilter(string errorType)
+        public ErrorCodeFilter(string errorCode)
         {
-            _errorType = errorType;
+            _errorCode = errorCode;
         }
 
         public async Task OnProcessingAsync(ErrorDetailContext context, Func<Task> next)
         {
             await next();
 
-            context.Type ??= _errorType;
+            context.Code ??= _errorCode;
         }
     }
 }

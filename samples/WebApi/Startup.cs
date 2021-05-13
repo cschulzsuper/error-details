@@ -43,11 +43,12 @@ namespace WebApi
             services.AddErrorDetails(options =>
             {
                 options.EnableStackTraceIteration();
+                options.EnableUnspecificyErrorMessages();
 
                 options.Filters.TargetSite();
                 options.Filters.TargetSiteContract();
-                options.Filters.ErrorType("about:blank");
-                options.Filters.ErrorTypeFromAnnotation<ErrorTypeAttribute>(attribute => $"https://example.com/probs/{attribute.Type}");
+                options.Filters.ErrorCode("about:blank");
+                options.Filters.ErrorCodeFromAnnotation<ErrorCodeAttribute>(attribute => $"https://example.com/probs/{attribute.Type}");
                 options.Filters.ErrorMessageFromAnnotation<ErrorMessageAttribute>(attribute => attribute.Message);
                 options.Filters.ErrorMessageFromException<SharedException>(exception => exception.Message);
             });

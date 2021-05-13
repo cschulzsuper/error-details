@@ -22,7 +22,7 @@ namespace Supercode.Core.ErrorDetails.Extensions
                     options.Filters.TargetSiteDeclaringType();
                     options.Filters.InnerException();
                     options.Filters.InnerExceptions();
-                    options.Filters.ErrorTypeFromAnnotation<ErrorTypeAttribute>(x => x.Type);
+                    options.Filters.ErrorCodeFromAnnotation<ErrorCodeAttribute>(x => x.Type);
                     options.Filters.ErrorMessageFromException();
                     options.Filters.ErrorMessageFromAnnotation<ErrorMessageAttribute>(x => x.Message);
                 });

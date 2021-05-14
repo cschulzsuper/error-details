@@ -7,7 +7,6 @@ on:
 env:
     PROJECT_NAME_IMPLEMENTATION: Supercode.Core.ErrorDetails
     PROJECT_NAME_CONTRACT: Supercode.Core.ErrorDetails.Contract
-    PROJECT_NAME_ANNOTATIONS: Supercode.Core.ErrorDetails.Annotations
     
     GITHUB_FEED: https://nuget.pkg.github.com/cschulzsuper/index.json
     NUGET_FEED: https://api.nuget.org/v3/index.json
@@ -48,6 +47,7 @@ jobs:
         name: nupkg
         path: ./src/${{ env.PROJECT_NAME_IMPLEMENTATION }}/bin/Release/*.nupkg
 
+
     - name: Build Contract
       run: dotnet build -c Release --no-restore -p:Version=${PACKAGE_VERSION/v} src/$PROJECT_NAME_CONTRACT/$PROJECT_NAME_CONTRACT.csproj
 
@@ -62,22 +62,6 @@ jobs:
       with:
         name: nupkg
         path: ./src/${{ env.PROJECT_NAME_CONTRACT }}/bin/Release/*.nupkg
-
-
-    - name: Build Default
-      run: dotnet build -c Release --no-restore -p:Version=${PACKAGE_VERSION/v} src/$PROJECT_NAME_ANNOTATIONS/$PROJECT_NAME_ANNOTATIONS.csproj
-
-    - name: Pack Default
-      run: dotnet pack -v normal -c Release --no-restore --include-symbols --include-source -p:PackageVersion=${PACKAGE_VERSION/v} src/$PROJECT_NAME_ANNOTATIONS/$PROJECT_NAME_ANNOTATIONS.csproj
-
-    - name: Push Default to GitHub Feed
-      run: dotnet nuget push ./src/${{ env.PROJECT_NAME_ANNOTATIONS }}/bin/Release/*.nupkg --source $GITHUB_FEED --api-key ${{secrets.GITHUB_TOKEN}} --skip-duplicate --no-symbols true
-
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: nupkg
-        path: ./src/${{ env.PROJECT_NAME_ANNOTATIONS }}/bin/Release/*.nupkg
 
   release:
     needs: build

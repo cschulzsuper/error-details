@@ -11,7 +11,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Supercode.Core.ErrorDetails.Annotations\Supercode.Core.ErrorDetails.Annotations.csproj" />
+		<ProjectReference Include="..\..\src\Supercode.Core.ErrorDetails\Supercode.Core.ErrorDetails.csproj" />
 		<ProjectReference Include="..\SharedClasses\SharedClasses.csproj" />
 	</ItemGroup>
 
